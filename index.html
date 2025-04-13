@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CHEMBIO 3L03 - Final Report Tracker</h1>
+            <div id="countdown" class="countdown">
+                <div class="countdown-timer">
+                    <div id="days" class="countdown-item">
+                        <span class="countdown-value">--</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div id="hours" class="countdown-item">
+                        <span class="countdown-value">--</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div id="minutes" class="countdown-item">
+                        <span class="countdown-value">--</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div id="seconds" class="countdown-item">
+                        <span class="countdown-value">--</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <div class="countdown-message">Time remaining until deadline: Wed, Apr 16, 2025, 11:59 AM</div>
+            </div>
+        </header>
+
+        <div class="section-wrapper">
+            <h2><span class="emoji">📊</span> Overall Progress</h2>
+            <div class="overall-progress">
+                <div class="progress-bar-container">
+                    <div id="overall-progress-bar" class="progress-bar"></div>
+                    <div class="progress-segments" id="progress-segments">
+                        <!-- Segment bars will be added here by JavaScript -->
+                    </div>
+                </div>
+                <div id="overall-progress-value">0%</div>
+            </div>
+            
+            <div class="progress-legend" id="progress-legend">
+                <!-- Legend items will be added here by JavaScript -->
+            </div>
+
+            <h2><span class="emoji">📝</span> Section Progress</h2>
+            <div class="progress-container">
+                <div class="sections-grid">
+                    <!-- Section items will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="graph-wrapper">
+            <h2><span class="emoji">📈</span> Progress Timeline</h2>
+            <div class="graph-container" id="progress-graph"></div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #3498db;"></div>
+                    <span>Your Progress</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #e74c3c;"></div>
+                    <span>Target Progress</span>
+                </div>
+            </div>
+            <div class="tooltip" id="graph-tooltip"></div>
+        </div>
+
+        <div class="todo-wrapper">
+            <h2><span class="emoji">✅</span> To-Do List</h2>
+            <div class="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <select id="section-select">
+                    <option value="" disabled selected>Assign to section</option>
+                    <option value="Abstract">Abstract</option>
+                    <option value="Introduction">Introduction</option>
+                    <option value="Results">Results</option>
+                    <option value="Discussion">Discussion</option>
+                    <option value="Conclusions">Conclusions</option>
+                    <option value="Experimental">Experimental</option>
+                    <option value="References">References</option>
+                    <option value="General">General</option>
+                </select>
+                <button id="add-todo">Add Task</button>
+            </div>
+            <div class="todo-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Remaining</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul id="todo-list" class="todo-list">
+                <!-- Todo items will be added here by JavaScript -->
+            </ul>
+        </div>
+
+        <div class="notes-wrapper">
+            <h2><span class="emoji">📝</span> Quick Notes</h2>
+            <textarea id="notes-area" placeholder="Add your quick notes here..."></textarea>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
